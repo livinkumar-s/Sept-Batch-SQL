@@ -67,6 +67,14 @@ Constraint
 
 PRIMARY KEY --> No Duplicates and No Null. It identifies each records uniquely.
 
+Operators
+----------
+=         
+!= <>
+<
+>
+<=
+>=
 
 Queries 
 ----------
@@ -79,5 +87,26 @@ To Create Table --> CREATE TABLE tbname (
     .
 );
 
+To Insert data --> INSERT INTO tbname (col details) VALUES (),(),().....;
+To retrive data --> SELECT colDetails FROM tbname;
+To Update a data --> UPDATE tbname SET col=vall;
+To Delete a record --> DELETE FROM tbname; 
+
+
 CRUD 
 -----
+Create --> INSERT
+Read --> SELECT
+Update --> UPDATE
+Delete --> DELETE
+
+SQL_SAFE_UPDATE --> You cannot update/delete more than 1 record, WHERE clause is must. condition should depend on PK.
+
+SET SQL_SAFE_UPDATE=0;
+
+WHERE 
+---------
+>> To Filter the records.
+Ex: select, update, delete..... WHERE cond;
+condition --> expression that returns a boolean
+
