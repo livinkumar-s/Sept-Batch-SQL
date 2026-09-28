@@ -9,10 +9,14 @@ INSERT INTO actor VALUES (3,"Smith",25),(4,"David",30),
 (10,"Ron",90);
 
 SELECT * FROM actor WHERE name="John";
-
 UPDATE actor SET age=36;
 DELETE FROM actor;
-
 SET SQL_SAFE_UPDATES=1;
-
 ROLLBACK;
+
+SELECT "Hello" as data;
+SELECT name as actorName from actor;
+
+select 4+4;
+select 3*5;
+select age+10 from actor;

@@ -69,12 +69,53 @@ PRIMARY KEY --> No Duplicates and No Null. It identifies each records uniquely.
 
 Operators
 ----------
+Comparison 
+--------------
 =         
 != <>
 <
 >
 <=
 >=
+Logical Operators 
+-------------------
+and 
+or
+not
+
+BETWEEN  
+----------
+inclusive range 
+Ex: WHERE col BETWEEN n1 AND n2;  
+
+IN, NOT IN  
+------------
+Ex: WHERE col IN (v1,v2.......);
+
+LIKE, NOT LIKE
+----------------
+Pattern Matching 
+Ex: WHERE StrCol LIKE Pattern;
+
+Wildcards(pattern)
+--------------------
+% --> matches 0 to inf no of chars.
+_ --> only 1 char.
+
+"a%" --> "anand", "anshiya" "a"
+"%a"  --> "anshiya" "a" "leo"
+
+"_a_" --> "don" "dan"
+
+Order By 
+-----------
+Ex: select.... order by col asc/desc;
+
+LIMIT/OFFSET 
+--------------
+LIMIT ---> limit the records.
+OFFSET --> Skips the records at begenning
+
 
 Queries 
 ----------
@@ -109,4 +150,3 @@ WHERE
 >> To Filter the records.
 Ex: select, update, delete..... WHERE cond;
 condition --> expression that returns a boolean
-
