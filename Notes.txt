@@ -116,6 +116,42 @@ LIMIT/OFFSET
 LIMIT ---> limit the records.
 OFFSET --> Skips the records at begenning
 
+Functions of MySQL 
+-------------------
+>> it takes input from only one row at a time.
+
+Numeric Functions 
+------------------
+ROUND(dec,decPlace) --> it rounds a number to specified decimals. Ex:ROUND(3.14) --> 3
+FLOOR(dec) ---> returns a floor value
+CEIL(dec) --> returns ceiled int
+ABS(num) --> absolute number
+MOD(n1,n2) --> reminder
+POWER(n1,n2) --> raises a number to a power.
+SQRT(num)
+
+String Functions
+---------------------
+CONCAT(str1, str2.......) --> concatination.
+length()
+UPPER(str)
+LOWER(str)
+TRIM(str)
+LTRIM(str)
+RTRIM(str)
+REVERSE(str)
+SUBSTRING(str, start, length) "Hello world" --> "Hell"
+REPLACE(str, old, new) "Hello world" --> Hi world
+
+"hello" --> "H"
+
+DATE TIME 
+---------
+CURTIME()
+CURDATE()
+NOW()
+DATEDIFF(d1,d2)
+
 
 Queries 
 ----------

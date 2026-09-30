@@ -15,3 +15,8 @@ select * from actor limit 3 offset 6;
 insert into actor value (11,"Leo",90);
 
 SELECT * FROM actor ORDER BY age DESC LIMIT 1;
+
+select 6/6;
+
+select sqrt(81);                                                               
+
