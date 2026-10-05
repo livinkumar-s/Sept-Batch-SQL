@@ -66,6 +66,15 @@ Constraint
 >> Rule applied to a column.
 
 PRIMARY KEY --> No Duplicates and No Null. It identifies each records uniquely.
+FOREIGN KEY --> connects 2 tables.. referential integrity.
+
+AUTO_INCREMENT --> generates the next number.
+UNIQUE --> No duplicates 
+NOT NULL --> No Nulls 
+DEFAULT --> adds default value to a column. (default val)
+CHECK --> ensures that a condition is satisfied. (CHECK (cond))
+
+UPDATE, DELETE --> ACTION
 
 Operators
 ----------
@@ -186,3 +195,27 @@ WHERE
 >> To Filter the records.
 Ex: select, update, delete..... WHERE cond;
 condition --> expression that returns a boolean
+
+ALTER 
+------
+
+
+Cricketer 
+-----------
+id   name                mailId                         cent  isActive 
+------------------------------------------------------------------------
+10	virat kohli	        virat.kohli@example.com	        15	1
+2	Rohit Sharma	    rohit.sharma@example.com	    12	1
+5	sachin tendulkar	sachin.tendulkar@example.com	18	0
+6	MS Dhoni	        ms.dhoni@example.com	        15	0
+7	goutham gambhir	    goutham.gambhir@example.com	1   2	0
+
+
+jersey  
+-------
+id    jersey    playerId (fk --> Cricketer(id))
+------------------------------
+1      18        1
+2      7         6
+3      45        2
+4      67        10(invalid)

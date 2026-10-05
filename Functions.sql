@@ -30,3 +30,8 @@ select datediff("2026-12-25",curdate()) as result;
 select sqrt(age) from actor; 
 SELECT mod(age,2) as result from actor;
 
+select concat('his name is ' , upper(name), ' he is' , age, '.') as details
+from actor;
+
+
+ 
