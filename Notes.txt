@@ -196,6 +196,36 @@ WHERE
 Ex: select, update, delete..... WHERE cond;
 condition --> expression that returns a boolean
 
+Joins 
+--------
+>> It is used to combine rows from two or more tables based on related columns.
+
+Inner Join 
+--------------
+>> It Retrives matching rows from both tables.
+>> It skips the unmatched rows.
+Ex: SELECT * FROM tb1 INNER JOIN tb2 ON relation;
+
+Left Outer Join 
+----------------
+>> It retrives all records from left table.
+>> only matching record from right table.
+Ex: SELECT * FROM tb1 LEFT JOIN tb2 ON relation;
+
+Right Outer Join 
+----------------
+>> It retrives all records from right table.
+>> only matching record from left table.
+Ex: SELECT * FROM tb1 RIGHT JOIN tb2 ON relation;
+
+Full Outer Join 
+----------------
+>> It retrives all records from both table.
+Ex: SELECT * FROM tb1 RIGHT JOIN tb2 ON relation
+UNION 
+SELECT * FROM tb1 LEFT JOIN tb2 ON relation;
+
+
 ALTER 
 ------
 
@@ -204,12 +234,18 @@ Cricketer
 -----------
 id   name                mailId                         cent  isActive 
 ------------------------------------------------------------------------
-10	virat kohli	        virat.kohli@example.com	        15	1
+1	virat kohli	        virat.kohli@example.com	        15	1
 2	Rohit Sharma	    rohit.sharma@example.com	    12	1
 5	sachin tendulkar	sachin.tendulkar@example.com	18	0
 6	MS Dhoni	        ms.dhoni@example.com	        15	0
 7	goutham gambhir	    goutham.gambhir@example.com	1   2	0
 
+iplteam 
+----------
+1	csk	    6
+2	mi	    5
+3	mi	    2
+4	pbks	10
 
 jersey  
 -------
