@@ -162,6 +162,12 @@ NOW()
 DATEDIFF(d1,d2)
 
 
+DDL --> Data Defenition Lang --> CREATE, ALTER, TRUNCATE
+DML --> Data Manipulation Lang --> INSERT, UPDATE, DELETE 
+DQL --> Data Query Lang --> SELECT 
+TCL --> Transaction Control Lang --> 
+DCL --->
+
 Queries 
 ----------
 To Create a DB --> CREATE DATABASE dbName;
@@ -228,30 +234,50 @@ SELECT * FROM tb1 LEFT JOIN tb2 ON relation;
 
 ALTER 
 ------
+>> it is used to modify the structure an existing table.
+ALTER TABLE tbname ....
 
+To add a new column ---> ... ADD colName dt cons;
+To add multiple columns --> ... ADD colName dt, ADD colname dt....;
+To Change Datatype or Attribute --> ... MODIFY colName dt;
+To Rename a column --> ... RENAME COLUMN col TO newName;
+To Drop a Column --> ... DROP COLUMN colName;
+To Change a column --> .... CHANGE oldName newName dt;
 
-Cricketer 
------------
-id   name                mailId                         cent  isActive 
-------------------------------------------------------------------------
-1	virat kohli	        virat.kohli@example.com	        15	1
-2	Rohit Sharma	    rohit.sharma@example.com	    12	1
-5	sachin tendulkar	sachin.tendulkar@example.com	18	0
-6	MS Dhoni	        ms.dhoni@example.com	        15	0
-7	goutham gambhir	    goutham.gambhir@example.com	1   2	0
+To Rename a Table --> ALTER TABLE tbname RENAME TO newName;
+To Drop a Table --> DROP TABLE tbname;
+To Drop a DB --> DROP DATABSE dbname;
 
-iplteam 
+To Truncate a table --> TRUNCATE TABLE tbname;
+
+Aggregation and Grouping 
+--------------------------
+>> it performs an operation on set of values and returns a single summarized result.
+
+Aggregate Functions 
+----------------------
+SUM --> sum of data.
+COUNT --> count(col), count(*)
+AVG --> average of num col
+MAX --> largest value
+MIN --> smallest value 
+
+Grouping 
 ----------
-1	csk	    6
-2	mi	    5
-3	mi	    2
-4	pbks	10
+GROUP BY 
+>> it groups the records that have same value in a col.
 
-jersey  
--------
-id    jersey    playerId (fk --> Cricketer(id))
-------------------------------
-1      18        1
-2      7         6
-3      45        2
-4      67        10(invalid)
+EX: SELECT aggr FROM tbname GROUP BY col;
+
+WHERE(record Filteration) --> aggregation
+
+HAVING 
+--------
+WHERE --> Records 
+HAVING --> GROUPS
+
+WHERE --> GROUP ---> AGGR --> HAVING
+
+
+SubQueries 
+------------

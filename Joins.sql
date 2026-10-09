@@ -34,3 +34,5 @@ select c.name, i.name,j.jersey
 from cricketer c inner join jersey j on
 j.playerId=c.id inner join iplteam i on
 i.playerId=c.id;
+
+
