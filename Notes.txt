@@ -281,3 +281,24 @@ WHERE --> GROUP ---> AGGR --> HAVING
 
 SubQueries 
 ------------
+>> Queries written inside another query.(inner or nested query)
+Ex: ......(subquery)...
+
+>> subquery executes first.
+>> main query uses result of subquery.
+
+Single Row Subquery 
+--------------------
+>> Returns only one row
+
+Multiple Row Subquery 
+-----------------------
+>> Returns multiple rows. used with IN,NOT IN, ALL, ANY.
+
+Correlated Subqueries 
+------------------------
+>> inner query depends on the current row of the outer query.
+
+
+select * from students s1 where mark>(select avg(mark) from students where dept=EEE); 83.5000
+s1.dept="EEE"
