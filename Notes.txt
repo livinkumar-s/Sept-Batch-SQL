@@ -162,10 +162,10 @@ NOW()
 DATEDIFF(d1,d2)
 
 
-DDL --> Data Defenition Lang --> CREATE, ALTER, TRUNCATE
+DDL --> Data Defenition Lang --> CREATE, ALTER, TRUNCATE 
 DML --> Data Manipulation Lang --> INSERT, UPDATE, DELETE 
 DQL --> Data Query Lang --> SELECT 
-TCL --> Transaction Control Lang --> 
+TCL --> Transaction Control Lang --> COMMIT, AUTOCOMMIT, ROLLBACK, SAVEPOINT....
 DCL --->
 
 Queries 
@@ -302,3 +302,32 @@ Correlated Subqueries
 
 select * from students s1 where mark>(select avg(mark) from students where dept=EEE); 83.5000
 s1.dept="EEE"
+
+
+Transactions
+---------------
+COMMIT - it permanantly saves the changes.
+ROLLBACK - it cancels uncommitted changes.
+AUTOCOMMIT --> it is a setting in MySQL that automatically commits each successfull statements
+
+update --> change(temp) --> commit(permanant)
+
+>> Transaction is a group of SQL statements treated as a single unit of work.
+
+START TRANSACTION;
+query1
+query2
+SAVEPOINT s1
+query3
+query4
+SAVEPOINT s2
+query5
+COMMIT;
+ROLLBACK To s1;
+
+ACID properties
+-------------------
+Atomicity --> All or nothing.
+Consistency --> Data remains valid
+Isolation --> Transactions don't interfere
+Durability --> Once committed, it stays permanant
